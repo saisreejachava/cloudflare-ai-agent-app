@@ -1,7 +1,8 @@
-# 🧠 Cloudflare AI Agent Chat App
+# 🚀 Cloudflare AI Agent Chat App
 
-An AI-powered real-time chat application built using Cloudflare Workers AI, Agents SDK, and Durable Objects.  
-This project demonstrates how to build a scalable serverless AI application with memory and real-time communication.
+An AI-powered real-time chat application built using **Cloudflare Workers, Agents SDK, Durable Objects, and Workers AI (Llama 3.3)**.  
+This project demonstrates how to build a scalable, serverless AI chat system with persistent conversation memory and WebSocket-based real-time messaging.
+
 ---
 ## 🌐 Live Demo
 👉 https://cloudflare-agents-chat.chavasaisreeja2002.workers.dev
