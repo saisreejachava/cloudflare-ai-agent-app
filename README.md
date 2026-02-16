@@ -2,7 +2,13 @@
 
 An AI-powered real-time chat application built using Cloudflare Workers AI, Agents SDK, and Durable Objects.  
 This project demonstrates how to build a scalable serverless AI application with memory and real-time communication.
+---
+## 🌐 Live Demo
+👉 https://cloudflare-agents-chat.chavasaisreeja2002.workers.dev
 
+## 💻 GitHub Repository
+👉 https://github.com/saisreejachava/cloudflare-ai-agent-app
+---
 ## 🚀 Features
 - LLM Integration: Llama 3.3 via Cloudflare Workers AI  
 - Persistent memory using Durable Objects  
@@ -13,6 +19,19 @@ This project demonstrates how to build a scalable serverless AI application with
 
 ## 🏗️ Architecture
 User → Web Chat UI → Cloudflare Agent (Durable Object) → Workers AI (Llama 3.3) → Response to UI
+
+
+## ⚙️ How It Works
+
+1. User opens chat UI  
+2. A unique Agent ID is generated per user  
+3. WebSocket connects to Cloudflare Agent (Durable Object)  
+4. User message → sent to Worker  
+5. Worker calls Workers AI (Llama 3.3)  
+6. Response returned in real-time  
+7. Conversation stored in Durable Object memory  
+
+---
 
 ## 🛠️ Tech Stack
 - Cloudflare Workers  
@@ -56,7 +75,8 @@ This project demonstrates building a complete AI-powered application using Cloud
 ## 👤 Author
 Sai Sreeja Chava  
 MS Computer Science – University of Florida  
-GitHub: https://github.com/saisreejachava
+
+
 
 ## ⭐ Future Improvements
 - Streaming AI responses  
