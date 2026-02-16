@@ -1,40 +1,65 @@
-# Cloudflare Agents Chat (Workers AI + Durable State)
+# 🧠 Cloudflare AI Agent Chat App
 
-A small AI-powered chat app built on **Cloudflare Agents**.
+An AI-powered real-time chat application built using Cloudflare Workers AI, Agents SDK, and Durable Objects.  
+This project demonstrates how to build a scalable serverless AI application with memory and real-time communication.
 
-## What this demonstrates (matches the assignment rubric)
+## 🚀 Features
+- LLM Integration: Llama 3.3 via Cloudflare Workers AI  
+- Persistent memory using Durable Objects  
+- Real-time chat via WebSockets  
+- Fully serverless deployment on Cloudflare Workers  
+- Per-user conversation state  
+- Fast global edge deployment  
 
-- **LLM:** Llama 3.3 on **Workers AI**
-- **Workflow / coordination:** (optional extension) use **Cloudflare Workflows** to post-process chats (summaries / memory extraction)
-- **User input:** browser **chat UI** using a **WebSocket**
-- **Memory / state:** per-user chat history stored in an **Agent** (Durable Object + SQLite-backed state)
+## 🏗️ Architecture
+User → Web Chat UI → Cloudflare Agent (Durable Object) → Workers AI (Llama 3.3) → Response to UI
 
-## Local dev
+## 🛠️ Tech Stack
+- Cloudflare Workers  
+- Cloudflare Agents SDK  
+- Workers AI (Llama 3.3)  
+- Durable Objects (state & memory)  
+- WebSockets  
+- TypeScript  
+- HTML/CSS frontend  
 
-### Prereqs
-- Node.js 18+
-- Cloudflare account (for deploy)
-- Wrangler CLI (installed via devDependencies)
+## 📂 Project Structure
+cloudflare-ai-agent-app/  
+│── public/index.html      → Chat UI  
+│── src/server.ts          → Agent + AI logic  
+│── wrangler.jsonc         → Cloudflare config  
+│── package.json  
+│── README.md  
 
-### Run
-```bash
-npm install
-npm run dev
-```
+## 💻 Run Locally
+npm install  
+npx wrangler dev  
 
-Then open:
-- Frontend: http://localhost:8787
+Open:  
+http://localhost:8787  
 
-## Deploy
+## 🌍 Deploy
+npx wrangler deploy  
 
-```bash
-npm run deploy
-```
+After deploy you will get a live link like:  
+https://your-app-name.your-subdomain.workers.dev  
 
-## Notes
-- Each browser gets a generated `agentId` stored in `localStorage`, so your chat history persists for that user/device.
-- The WebSocket endpoint is `/agent/ChatAgent/<agentId>`.
+## 🧪 Example
+Type in chat:  
+Hi  
 
-## Customize
-- Change the model in `src/server.ts` (`env.AI.run(...)`)
-- Adjust `system` prompt for your use-case (career guidance, study buddy, etc.)
+AI responds using Llama 3.3 with conversation memory.
+
+## 🎯 Purpose
+This project demonstrates building a complete AI-powered application using Cloudflare’s ecosystem including LLM integration, agent workflows, persistent memory, and real-time communication.
+
+## 👤 Author
+Sai Sreeja Chava  
+MS Computer Science – University of Florida  
+GitHub: https://github.com/saisreejachava
+
+## ⭐ Future Improvements
+- Streaming AI responses  
+- Voice input  
+- Multi-agent workflows  
+- Document (PDF) chat using RAG  
